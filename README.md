@@ -1,1 +1,1 @@
-# Project1_Kangmin
+# C 언어를 사용한 코드 작성 및 연습 
