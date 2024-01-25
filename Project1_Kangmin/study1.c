@@ -1,7 +1,15 @@
 #include <stdio.h>
 int main(void) {
 
-	printf("Hello World");
+	for (int i = 1; i <= 9; i++) {
 
-	return 0;
+		for (int j = 1; j <= 9; j++) {
+
+			printf(" %3d ", i * j);
+
+		}
+
+		printf("\n");
+
+	}
 }
