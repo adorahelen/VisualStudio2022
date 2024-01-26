@@ -19,7 +19,7 @@ int main(void)
 	printf(" 검색값 : ");
 	scanf("%d", &ky);
 
-	int index = search(x, nx, ky); // re
+	int index = search(x, nx, ky); // x는 배열, nx는 크기, 
 	if (index == -1)
 		puts("검색에 실패하였습니다.");
 	else
