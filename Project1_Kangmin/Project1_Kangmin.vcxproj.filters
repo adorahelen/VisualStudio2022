@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BinarySearch.c">
+    <ClCompile Include="array1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
