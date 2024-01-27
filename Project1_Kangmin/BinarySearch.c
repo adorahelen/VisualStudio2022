@@ -7,13 +7,13 @@ int binarySearch(int a[], int b, int c);
 	{
 		int numX, key;
 
-		printf("이진검색");
+		puts("이진검색");
 		printf("요소개수: ");
 		scanf("%d", &numX);
 		int* x = calloc(numX, sizeof(int));
 
-		printf("오름차순으로 입력하세요.\n"); // sorting  알고리즘 추후에 추가
-		printf("x[0]: ");
+		puts("오름차순으로 입력하세요."); // sorting  알고리즘 추후에 추가
+		printf("x[0] : ");
 		scanf("%d", &x[0]);
 
 		// sorting 알고리즘 아니기 때문에 부가조건이 많음
@@ -37,19 +37,21 @@ int binarySearch(int a[], int b, int c);
 
 	int binarySearch(int a[], int b, int c) { // 동적배열/ 사이즈/ 키값
 
-		int first = 0;
-		int last = b - 1;
+		int first = 0; // 검색 범위 맨 앞의 인덱스
+		int last = b - 1; // 검색 범위 맨 끝의 인덱스
 
 		do {
 			int center = (first + last) / 2;
-			if (a[first] == c)
-				return center; // 한가운데 인덱스
+			if (a[center] == c)
+				return center; // 검색 범위가 한 가운데의 인덱스인 경우
 
-			else if (a[center] < c)
-				first = center + 1;
+			else if (a[center] < c) // 39 < key(120)
+				first = center + 1; // 검색 범위 뒤쪽 절반으로
 
 			else
-				last = first - 1;
-		} while (first <= last);
-		return -1;
+				last = center - 1; // 검색 범위를 앞쪽 절반으로
+
+		} while (first <= last); // 계속 비교  
+		return -1; 
 	} // 알고리즘 틀린거 같다 계속 실패 
+	// 원인은 함수를 작성할때, do while 문 안에 center 대신 다른 것들을 넣었음
